@@ -1,0 +1,170 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@import url('https://fonts.googleapis.com/css2?family=Belanosima:wght@400;600;700&family=Lobster+Two&family=Nunito:ital,wght@0,200;0,300;1,200;1,300&family=Roboto:wght@100;400&family=Shantell+Sans:wght@300&family=Tilt+Neon&display=swap');
+
+body {
+  margin: 0;
+  font-family: Nunito,
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family:Nunito, 'Courier New',
+    monospace;
+}
+
+
+.Link-container a{
+
+  position: relative;
+  z-index: 4;
+  transition-property: all;
+  transition-duration: 0s;
+  transition-timing-function: ease-in-out;
+
+}
+
+
+
+.Link-container a::before{
+  position: absolute;
+  left: 0;
+  top: 100%;
+  bottom: 0;
+  content: "";
+  transform: scaleX(0);
+  height: 10%;
+  width: 100%;
+  background-color: white;
+  transition-property: transform;
+  transition-duration: 400ms;
+  transform-origin: right;
+  z-index: -1;
+}
+
+.Link-container a:hover::before{
+  transform: scaleX(1);
+  transform-origin: left;
+}
+.Name{
+
+  position: relative;
+  z-index: 4;
+  transition-property: all;
+  transition-duration: 0s;
+  transition-timing-function: ease-in-out;
+
+}
+
+
+.Name::before{
+  position: absolute;
+  left: 0;
+  top: 100%;
+  bottom: 0;
+  content: "";
+  transform: scaleX(0);
+  height: 10%;
+  width: 100%;
+  background-color: white;
+  transition-property: transform;
+  transition-duration: 400ms;
+  transform-origin: right;
+  z-index: -1;
+}
+
+.Name:hover::before{
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: rgba(127, 24, 206, 0.9);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgba(187, 128, 231,0.8);
+
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+
+.parallax-effect-glare-scale {
+  /* @include background; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transform-style: preserve-3d;
+
+  .inner-element {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 35px;
+    font-style: italic;
+    color: white;
+    transform: translateZ(60px);
+  }
+}
+
+
+.languageDiv {
+
+  animation-name: scaling;
+  animation-duration: 1s;
+  animation-direction: normal;
+  transform-origin: top;
+  animation-timing-function: cubic-bezier(.47,1.64,.41,.9);
+  
+}
+
+@keyframes scaling {
+
+  0%{
+    transform: scaleY(0);
+  } 
+  100%{
+    transform: scaleY(1);
+  }
+  
+}
+
+
+
+/* 
+.swiper {
+  width: 500px;
+  height: 300px;
+
+}
+
+.swiper-slide {
+  background-position: center;
+  background-size: cover;
+  width: 300px;
+  height: 300px;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 50%;
+} */
